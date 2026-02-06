@@ -3,12 +3,8 @@ import { useRoute, useRouter } from 'vue-router'
 
 import { createBooking, fetchCinemas, fetchMovieSessionDetails, fetchMovies } from '@/api'
 import { useAuthStore } from '@/stores/auth'
+import { formatDate, formatTime } from '@/utils/date'
 import type { Cinema, Movie, MovieSessionDetails, Seat } from '@/types/models'
-
-const formatDate = (value: string) =>
-  new Date(value).toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit' })
-const formatTime = (value: string) =>
-  new Date(value).toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })
 
 type SeatView = {
   rowNumber: number

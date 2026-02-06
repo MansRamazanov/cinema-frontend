@@ -2,12 +2,8 @@ import { computed, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
 import { fetchCinemaSessions, fetchCinemas, fetchMovies } from '@/api'
+import { formatDate, formatTime } from '@/utils/date'
 import type { Cinema, Movie, MovieSession } from '@/types/models'
-
-const formatDate = (value: string) =>
-  new Date(value).toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit' })
-const formatTime = (value: string) =>
-  new Date(value).toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' })
 
 type SessionTime = {
   id: number
