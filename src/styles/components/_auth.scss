@@ -1,0 +1,69 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.auth-form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  &__card {
+    width: 360px;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    padding: 24px;
+    display: grid;
+    gap: 16px;
+    background: $color-panel;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__field {
+    display: grid;
+    gap: 8px;
+    font-size: 14px;
+
+    input {
+      background: transparent;
+      border: 1px solid $color-border;
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: inherit;
+    }
+  }
+
+  &__submit {
+    border: 1px solid $color-border;
+    border-radius: 6px;
+    padding: 10px 16px;
+    background: #1b1b1b;
+    color: inherit;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  &__error {
+    color: $color-red;
+  }
+
+  &__hint {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+}
+
+@include mobile {
+  .auth-form {
+    &__card {
+      width: 100%;
+      padding: 16px;
+    }
+  }
+}

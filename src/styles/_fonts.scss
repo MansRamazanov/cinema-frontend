@@ -1,0 +1,10 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+//RobotoSerif
+@include font-face($url-font + "RobotoSerif/RobotoSerif-400", "RobotoSerif", 400, normal);
+@include font-face($url-font + "RobotoSerif/RobotoSerif-700", "RobotoSerif", 700, normal);
+
+//RobotoCondensed
+@include font-face($url-font + "RobotoCondensed/RobotoCondensed-400", "RobotoCondensed", 400, normal);
+@include font-face($url-font + "RobotoCondensed/RobotoCondensed-700", "RobotoCondensed", 700, normal);

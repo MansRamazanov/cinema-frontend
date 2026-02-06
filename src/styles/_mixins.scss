@@ -1,0 +1,50 @@
+@mixin font-face($url, $font-family, $font-weight, $font-style) {
+	@font-face {
+		src:
+			local($font-family),
+			url($url + ".woff2") format("woff2"),
+			url($url + ".woff") format("woff");
+		font-family: $font-family;
+		font-weight: $font-weight;
+		font-style: $font-style;
+		font-display: swap;
+	}
+}
+
+@mixin desktop-xl {
+	@media (min-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin desktop-aspect {
+	@include desktop {
+		@media (min-aspect-ratio: 1440 / 800) {
+			@content;
+		}
+	}
+}
+
+@mixin desktop {
+	@media (min-width: 840px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (max-width: 839px) {
+		@content;
+	}
+}
+
+@mixin landscape {
+	@media (orientation: landscape) {
+		@content;
+	}
+}
+
+@mixin portrait {
+	@media (orientation: portrait) {
+		@content;
+	}
+}

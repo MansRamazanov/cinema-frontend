@@ -1,0 +1,94 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+body {
+  font-family: $font-base;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-decoration-skip: objects;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  color: $color-text;
+  -webkit-tap-highlight-color: transparent;
+  background-color: $color-bg;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.select2-selection:focus,
+.select2-selection:visited,
+.select2-selection:active,
+.select2-selection:hover,
+a:focus,
+a:visited,
+a:active,
+a:hover,
+textarea:focus,
+textarea:visited,
+textarea:active,
+textarea:hover,
+input:focus,
+input:visited,
+input:active,
+input:hover,
+select:focus,
+select:visited,
+select:active,
+select:hover,
+button:focus,
+button:visited,
+button:active,
+button:hover {
+  outline: 0;
+  outline-style: none;
+}
+
+a,
+button {
+  outline: none;
+  text-decoration: none;
+  color: currentColor;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+#app {
+  min-height: 100vh;
+}
